@@ -8,3 +8,7 @@
 4. Kubernetes
   * Minikube
   * Kubectl
+  
+## How to Contribute
+
+Follow these contribution [guidelines](CONTRIBUTING.md)

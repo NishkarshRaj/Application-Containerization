@@ -46,7 +46,17 @@ To see the available machines we can import via vagrant from **Vagrant Cloud**, 
 $ vagrant up
 ```
 
-6. Enter the Shell Terminal of the up machine
+6. Enter the Shell Terminal of the up machine from the Parent machine Command line
 ```
 $ vagrant ssh
+```
+
+7. Exit the shell of Virtual Machine to return to parent OS command line
+```
+$ exit
+```
+
+8. Send the power off signal to the up VM
+```
+$ vagrant halt
 ```

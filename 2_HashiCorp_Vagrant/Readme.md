@@ -10,3 +10,13 @@
  $ vagrant ssh
  $ vagrant halt
  ```
+
+## Procedure
+
+**Download HashiCorp Vagrant** 
+Visit the official Vagrant website to download the software by using this [link](https://www.vagrantup.com/downloads.html)
+
+**Check if Vagrant is successfully installed by using the following command on CMD**
+```
+$ vagrant --version
+```

@@ -60,3 +60,21 @@ $ exit
 ```
 $ vagrant halt
 ```
+
+## Ping one VM from another VM or the Parent OS command line
+
+> To check default IP Address of machine, use the following command from VM Shell
+```
+$ ifconfig
+```
+The IP of the machine is the **inet address of enp**
+
+> To change the default IP Address, close the machine and make changes in the Vagrant file. Relaunch the machine and fire ifconfig command again
+```
+Changes to be made in 'Create a Private Network' division
+```
+
+> Ping the machine using following command
+```
+$ ping <<IP Address>>
+```

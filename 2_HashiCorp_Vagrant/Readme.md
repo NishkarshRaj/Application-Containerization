@@ -20,3 +20,33 @@ Visit the official Vagrant website to download the software by using this [link]
 ```
 $ vagrant --version
 ```
+
+**Creating a virtual machine using Vagrant**
+
+1. Using command line, create a new directory that will have vagrant configurations:
+```
+$ mkdir <<directory name>>
+```
+
+2. Move to the newly created directory
+```
+$ cd <<directory name>>
+```
+
+3. Initialize Vagrant configurations and create **Vagrantfile** by using the following command
+```
+$ vagrant init
+```
+
+4. Open the Vagrantfile and specify the OS you want to configure and the hardware resources to be allocated
+To see the available machines we can import via vagrant from **Vagrant Cloud**, visit this [link](https://app.vagrantup.com/boxes/search)
+
+5. Launch the Virtual machine from the command line on Oracle Virtual Box
+```
+$ vagrant up
+```
+
+6. Enter the Shell Terminal of the up machine
+```
+$ vagrant ssh
+```

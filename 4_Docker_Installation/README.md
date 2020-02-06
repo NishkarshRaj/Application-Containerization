@@ -1,5 +1,7 @@
 # Install Docker on Ubuntu Linux
 
+## Way 1: Unofficial docker.io package
+
 1. Go to root folder with root priviliges
 
 2. Update and upgrade
@@ -32,3 +34,5 @@ $ docker run hello-world
 ```
 $ docker run -it ubuntu bash
 ```
+
+## Way 2: Official Docker registry installation

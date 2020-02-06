@@ -14,7 +14,7 @@
 1. Installation of Oracle Virtual Box and creating a virtual machine on it.
 2. Installation of HashiCorp Vagrant and creating multiple machines using it simultaneously and communicating them via ping command.
 3. Advanced networking and web server hosting using Nginx in multiple VM using Vagrant
-
+4. Installation of Docker in * nix systems
   
 ## How to Contribute
 

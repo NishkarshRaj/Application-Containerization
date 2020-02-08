@@ -26,8 +26,9 @@ $ systemctl enable nginx
 ```
 
 ## Modifying default Index file
+
 ```
-Update index.html file -> /var/www/html/index.nginx-debian.html
+$ gedit /var/www/html/index.nginx-debian.html
 $ sudo systemctl restart nginx
 $ curl -4 icanhazip.com
 ```

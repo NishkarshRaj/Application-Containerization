@@ -5,11 +5,20 @@
 ```
 $ sudo apt-get update
 $ sudo apt install nginx
+```
+
+**Enable Nginx and launch the web server**
+```
 $ sudo ufw app list
 $ sudo ufw enable
 $ sudo ufw allow 'Nginx HTTP'
 $ sudo ufw status
 $ systemctl status nginx
+```
+
+**Check your static server IP address by typing the following command:**
+
+```
 $ curl -4 icanhazip.com
 ```
 

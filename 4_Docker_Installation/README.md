@@ -37,28 +37,30 @@ $ docker run -it ubuntu bash
 
 ## Way 2: Official Docker registry installation
 
-❖	First, in order to ensure the downloads are valid, add the GPG key for the official Docker repository to your system:
-
+1. Ensure the downloads are valid, add the GPG key for the official Docker repository to your system:
+```
 $ apt install curl
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
 
-❖	Add the Docker repository to APT sources:
-
+2.	Add the Docker repository to APT sources:
+```
 $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
 
-❖	Next, update the package database with the Docker packages from the newly added repo:
-
+3. Update the package database with the Docker packages from the newly added repo:
+```
 $ sudo apt-get update
-
-❖	Make sure you are about to install from the Docker repo instead of the default Ubuntu 16.04 repo:
-
+```
+4. Make sure you are about to install from the Docker repo instead of the default Ubuntu 18.04 repo:
+```
 $ apt-cache policy docker-ce
-
-❖	Finally, install Docker:
-
+```
+5. Install Docker engine:
+```
 $ sudo apt-get install -y docker-ce
-
-❖	Check that it’s running:
-
+```
+6. Verify Docker Installtion
+```
 $ sudosystemctl status docker
-
+```

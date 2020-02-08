@@ -39,7 +39,6 @@ $ docker run -it ubuntu bash
 
 1. Ensure the downloads are valid, add the GPG key for the official Docker repository to your system:
 ```
-$ apt install curl
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 

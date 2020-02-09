@@ -41,7 +41,7 @@ $ vagrant login
 
 8. Deploy the Vagrant box in default file **package.box** to vagrant cloud
 ```
-$ vagrant cloud <<username>>/<<Box name>> <<Version number>> <<Hypervisor>> package.box
+$ vagrant cloud publish <<username>>/<<Box name>> <<Version number>> <<Hypervisor>> package.box
 ```
 
 **Example:** `vagrant cloud noicecurse/nginx 1.0 virtualbox package.box`

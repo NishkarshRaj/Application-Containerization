@@ -7,24 +7,32 @@ $ vagrant up
 ```
 
 **2. Up a vagran box on vagrant**
-
+```
 $ vagrant ssh
-
-**3. install docker**
-
+```
+**3. Install docker on the virtual machine**
+```
 $ sudo apt install docker.io
-
-**4. pull alpine image**
-
+```
+**4. Pull the most basic Linux image: Alpine**
+```
 $ docker pull alpine
+```
 
-**5. run container**
-
+**5. Run Alpine container**
+```
 $ docker run alpine
+```
 
-**6. go inside container terminal**
+> Run command only exectues container which destroys itself after executing all its tasks.
 
+**6. Go inside container terminal using Interactive mode**
+
+```
 $ docker run -it alpine 
+```
+* **-i:** Interactive
+* **-t:** Terminal
 
 **7. stop the container**
 

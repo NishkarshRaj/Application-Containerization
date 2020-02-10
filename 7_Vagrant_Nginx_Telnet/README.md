@@ -95,3 +95,8 @@ $ curl -4 icanhazip.com
 ```
 $ sudo ufw disable
 ```
+
+## 4) Install Telnet in the Ubuntu Image
+```
+$ sudo apt-get install telnet
+```

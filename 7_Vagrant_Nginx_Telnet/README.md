@@ -49,3 +49,49 @@ $ vagrant ssh
 ```
 
 **Note:** To clear the windows CMD, use `cls` command.
+
+## 3) Install Nginx on Ubuntu Box Image
+
+* Update the Linux packages
+```
+$ sudo apt-get update
+```
+* Install Nginx on Ubunut
+```
+$ sudo apt install nginx
+```
+* See the list of services that can access ports
+```
+$ sudo ufw app list
+```
+* Allow port access by disabling the firewall
+```
+$ sudo ufw enable  
+```
+
+* **Note:** Enabling the port access is insecure and must always be disabled before exiting the container.
+
+* Allow Nginx HTTP service to use port 80
+```
+$ sudo ufw allow 'Nginx HTTP'
+```
+* Check port status if activated
+```
+$ sudo ufw status
+```
+* Install **systemd** package on Linux to use the **systemctl** command.
+```
+$ sudo apt-get install systemd
+$ systemctl status nginx
+```
+* Get the IP address where the static Nginx website is hosted
+```
+$ curl -4 icanhazip.com
+```
+
+> Verify Nginx installation by opening the browser at `http://server_ip_address`
+
+* Disable the port access to restart firewall
+```
+$ sudo ufw disable
+```

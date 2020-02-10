@@ -36,3 +36,16 @@ config.vm.box="ubuntu/xenial64"
 **Note:** Nginx does not work successfully with ubuntu/trusty64 images.
 
 **Note:** Virtual Box must be opened in background before accessing terminal via Vagrant
+
+## 2) Up the ubuntu machine
+
+* Launch the virtual machine via Vagrant on command line
+```
+$ vagrant up
+```
+* Access virtual machine terminal via SSH (Secure Shell)
+```
+$ vagrant ssh
+```
+
+**Note:** To clear the windows CMD, use `cls` command.

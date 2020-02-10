@@ -34,31 +34,47 @@ $ docker run -it alpine
 * **-i:** Interactive
 * **-t:** Terminal
 
-**7. stop the container**
+**7. Send a running container in detached mode: Running but not interacted with**
 
-ctrl + p + s -> goes in detached mode : up but in daemon
+`ctrl + p + s` 
 
--> destroy container: $ docker stop <container name>
+> To stop an up and running container  
 
-**8. start the exited container**
+* Find the container name or ID by using `docker ps`
+```
+$ docker stop <container name>
+```
 
-$ docker ps
-$ docker ps -a
-$ docker start container-id : Launches an exited container in up and running state
+After stop command, container is destroyed and it moves into exit state.
+All the exited containers can be seen through `docker ps -a` command.
 
-**9. execute linux command in container using alpine shell**
+**8. Restart the exited container in up and running state**
+```
+$ docker start container-id 
+```
+**9. Execute linux command in container using alpine shell**
 
+```
 $ docker run -it alpine /bin/sh
+```
 
-**10. delete container -> remove exited containers from memory -> cannot see them after docker ps -a**
+**10. Delete containers: remove exited containers from memory so that they are inaccessible after docker ps -a**
 
+```
 $ docker rm container id
+```
 
-**11. delete images**
+**11. Delete Docker images in local repository**
 
-$ docker images -> to see all the images locally present
+* Command to see all the local Docker Images
+```
+$ docker images
+```
+
+* Delete Docker Images:
+```
 $ docker rmi <image name>
-
+```
 -> docker run -it -d alpine \bin\sh (run in background)
 -> docker run -it alpine \bin\sh (get terminal)
 (to execute detached image that is up -> Either by CTRL + P + Q or by opening it in detached mode -d)

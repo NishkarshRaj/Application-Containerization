@@ -130,3 +130,20 @@ $ vagrant cloud auth login
 ```
 $ vagrant cloud publish [username]/[box name] [version] virtualbox package.box
 ```
+
+## 7) Download the pushed image
+
+* Create a new directory for the image to be pushed
+
+```
+$ mkdir nish
+```
+* Change directory to the new image
+```
+$ cd nish
+```
+* Initialize the vagrant file
+```
+$ vagrant init
+```
+* Edit vagrant file with OS name as the one created above in step 6 `[username]/[box name]`

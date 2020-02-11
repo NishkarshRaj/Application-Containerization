@@ -147,3 +147,17 @@ $ cd nish
 $ vagrant init
 ```
 * Edit vagrant file with OS name as the one created above in step 6 `[username]/[box name]`
+
+## 8) Up the machine
+
+**Note:** To download own package box, we need to release it first
+
+* Launch the virtual machine via command line using Vagrant
+```
+$ vagrant up
+```
+
+* Access the terminal of the virtual machine
+```
+$ vagrant ssh
+```

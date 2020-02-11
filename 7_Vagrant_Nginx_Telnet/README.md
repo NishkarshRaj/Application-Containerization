@@ -161,3 +161,19 @@ $ vagrant up
 ```
 $ vagrant ssh
 ```
+
+## 9) Host an HTML page via Nginx
+```
+$ vi /var/www/html/index.nginx-debian.html
+```
+```
+$ sudo systemctl restart nginx
+```
+```
+$ curl -4 icanhazip.com
+```
+
+## 10) Access HTML page hosted on VM on browser of machine -> Using Telnet
+```
+$ telnet localhost
+```

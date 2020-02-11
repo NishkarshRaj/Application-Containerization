@@ -121,3 +121,12 @@ $ vagrant cloud auth login
 ```
 
 **Note:** `vagrant login` command is deprecated
+
+## 6) Publish image on cloud
+
+* Create the Image repository on [Vagrant Cloud](https://app.vagrantup.com/)
+* Create new Vagrant Box -> `[username]/[box name]`
+* Publish the package.box file from command line to Vagrant cloud
+```
+$ vagrant cloud publish [username]/[box name] [version] virtualbox package.box
+```

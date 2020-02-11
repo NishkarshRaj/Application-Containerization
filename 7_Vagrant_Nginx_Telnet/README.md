@@ -100,3 +100,24 @@ $ sudo ufw disable
 ```
 $ sudo apt-get install telnet
 ```
+
+## 5) Package image as golden image
+
+* Exit the virtual machine terminal and return to parent OS command line
+```
+$ exit
+```
+* Send the Power Off signal to virtual machine
+```
+$ vagrant halt
+```
+* Create a package.box file of the virtual box in current directory.
+```
+$ vagrant package
+```
+* Authenticate to Vagrant Cloud via command line.
+```
+$ vagrant cloud auth login
+```
+
+**Note:** `vagrant login` command is deprecated

@@ -46,12 +46,8 @@ $ docker run –it wordpress bash
 $ docker volume ls
 ```
 
-❖	Create another docker volume named "testvol"
+❖ Remove docker volume by name or ID
 
-	$ docker volume create --name testvol
-	$ docker volume ls
-
-❖	Remove docker volume by name or ID
 ```
 $ docker volume rm [volume name or volume ID]
 ```

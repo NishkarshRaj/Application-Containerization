@@ -1,6 +1,6 @@
 ## Docker Compose
 
-**Installation**
+**1. Installation**
 
 ❖ Install docker-compose on your machine, if not already installed.
 
@@ -20,7 +20,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose --version
 ```
 
-**Creating compose files**
+**2. Creating compose files**
 
 ❖ Create a directory named nginx in your root.
 ```
@@ -62,7 +62,8 @@ MYSQL_USER=root
 ```
 
 Priority decided by databases
-●	Running images using docker-compose
+
+**3. Running images using docker-compose**
 
 ❖	Save docker-compose.yaml file and do docker-compose up.
 $ docker-compose up –d

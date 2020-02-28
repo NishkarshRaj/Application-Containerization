@@ -29,20 +29,15 @@ $ exit
 
 **Note: To give root permissions in Docker and Vagrant, use** `$ sudo -s`
 
-•	Even if we stop the container or delete it, volume is permanent
-•	Re-running another docker container of wordpress after removing
+❖ Inspecting the default mounted volume:
 
-$ docker run –it wordpress bash
+```
+$ docker inspect [Container name or container ID]
+```
+	
+**Note: Until container attached deleted, cannot delete volume** 
 
-•	Remapping but can have different directory of container
-
-•	Docker inspect [id]
-
-•	BCD!!!! By inspecting, default mounted volume
-	Volume: permanent storage and communication
-	Until container attached deleted, cannot delete volume 
-	/var/lib/docker/volumes/[volumename]/_data/{}
-	Container with full permission -> sudo -s
+**Note: Volume data is stored at** `/var/lib/docker/volumes/[volumename]/_data/{}`
 
 ❖ Display all docker volumes.
 

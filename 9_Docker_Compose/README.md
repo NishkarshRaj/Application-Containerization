@@ -79,7 +79,9 @@ $ docker ps
 
 ❖	Verify nginx service is up and is accessible on machine.
 
+```
 $ curl localhost:80
+```
 
 ❖	Stop and remove your dockercontainer usingdocker-compose.
 

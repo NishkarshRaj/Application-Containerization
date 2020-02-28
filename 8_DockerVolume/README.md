@@ -23,6 +23,8 @@ $ echo “Hello World” >> test.txt
 $ exit	
 ```
 
+**Note: To give root permissions in Docker and Vagrant, use** `$ sudo -s`
+
 •	Even if we stop the container or delete it, volume is permanent
 •	Re-running another docker container of wordpress after removing
 

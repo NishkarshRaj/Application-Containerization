@@ -32,6 +32,25 @@ $ cd nginx
 $ sudo vi docker-compose.yml
 ```
 
+```
+version: '3'
+services:
+  databases:
+    image: mysql
+    ports:
+      - "3307:3306"
+    env_file:
+      - evs.env    
+  web:
+    image: nginx    
+    ports:
+      - "82:80" 
+    depends_on:
+      - databases
+```
+
+**82:80** -> Input to Output
+
 ❖ Create the environment file for passing as parameter to **docker-compose.yml** file
 ```
 $ gedit evs.env
@@ -41,21 +60,6 @@ MYSQL_ROOT_PASSWORD=redhat08
 MYSQL_DATABASE=nginxdb
 MYSQL_USER=root
 ```
-$ cat docker-compose.yml
-version: '3'
-services:
-databases:
-image: mysql
-ports:
-      - "3307:3306"
-env_file:
-      - evs.env
-web:
-image: nginx
-ports:
-      - "82:80" 
-depends_on:
-      - databases
 
 Priority decided by databases
 ●	Running images using docker-compose

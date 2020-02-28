@@ -27,6 +27,7 @@ $ docker-compose --version
 $ sudo mkdir nginx
 ```
 ❖ Switch to that directory and create a file named docker-compose.yml
+
 ```
 $ cd nginx
 $ sudo vi docker-compose.yml
@@ -49,6 +50,8 @@ services:
       - databases
 ```
 
+**Depends on: priortizes task -> If this container is not up, wont up rest containers.**
+
 **82:80** -> Input to Output
 
 ❖ Create the environment file for passing as parameter to **docker-compose.yml** file
@@ -60,8 +63,6 @@ MYSQL_ROOT_PASSWORD=redhat08
 MYSQL_DATABASE=nginxdb
 MYSQL_USER=root
 ```
-
-Priority decided by databases
 
 **3. Running images using docker-compose**
 

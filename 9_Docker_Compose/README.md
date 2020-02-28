@@ -1,4 +1,5 @@
-Docker Compose
+## Docker Compose
+
 ●	Installation
 
 ❖	Install docker-compose on your machine, if not already installed.

@@ -3,7 +3,7 @@
 ❖ Create a volume that would be stored permanently on parent OS but controlled by Docker engine
 
 ```
-$ docker volume create --name dbvol
+$ docker volume create --name [volume name]
 $ docker volume ls
 ```
 

@@ -67,9 +67,15 @@ MYSQL_USER=root
 **3. Running images using docker-compose**
 
 ❖	Save docker-compose.yaml file and do docker-compose up.
+```
 $ docker-compose up –d
+```
 
-Ups two containers – docker ps
+Launches all specified container in the .yml file
+
+```
+$ docker ps
+```
 
 ❖	Verify nginx service is up and is accessible on machine.
 

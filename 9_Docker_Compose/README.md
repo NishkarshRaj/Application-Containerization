@@ -1,12 +1,18 @@
 ## Docker Compose
 
-●	Installation
+**Installation**
 
-❖	Install docker-compose on your machine, if not already installed.
+❖ Install docker-compose on your machine, if not already installed.
 
+```
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+```
 
+* **Add executable permissions to Docker-compose program**
+
+```
 $ sudo chmod +x /usr/local/bin/docker-compose
+```
 
 ❖	Check docker-compose version.
 

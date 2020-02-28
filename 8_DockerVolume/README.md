@@ -7,11 +7,13 @@ $ docker volume create --name dbvol
 $ docker volume ls
 ```
 
-❖	Run docker container from wordpress image and mount "dbvol" to /var/lib/mysql
+❖ Run docker container and mount the volume by synchronizing it with a directory in the container.
 
-$ docker run -it -v dbvol:/var/lib/Nish wordpress bash
-
-Not needed creates on own
+```
+$ docker run -it -v [volume name]:[Absolute path of sync folder] [image name] bash
+```
+* If path of the sync folder specified does not exists, creates on container launch.
+* Docker Volumes are stored at **/var/lib/Docker/volumes**
 
 # mkdir /var/lib/Nish
 

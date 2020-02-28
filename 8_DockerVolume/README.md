@@ -51,10 +51,11 @@ $ docker volume ls
 	$ docker volume create --name testvol
 	$ docker volume ls
 
-❖	Remove docker volume "testvol"
+❖	Remove docker volume by name or ID
+```
+$ docker volume rm [volume name or volume ID]
+```
 
-	$ docker volume rm testvol
-	
 ❖ Delete all the Docker Volumes at once
 
 ```

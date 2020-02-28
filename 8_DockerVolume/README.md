@@ -15,13 +15,13 @@ $ docker run -it -v [volume name]:[Absolute path of sync folder] [image name] ba
 * If path of the sync folder specified does not exists, creates on container launch.
 * Docker Volumes are stored at **/var/lib/Docker/volumes**
 
-# mkdir /var/lib/Nish
+❖ Make changes in the synchronized folder of the container
 
-# cd /var/lib/Nish	
-
-# echo “Hello World” >> test.txt
-
-# exit	
+```
+$ cd [sync folder]	
+$ echo “Hello World” >> test.txt
+$ exit	
+```
 
 •	Even if we stop the container or delete it, volume is permanent
 •	Re-running another docker container of wordpress after removing

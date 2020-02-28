@@ -83,8 +83,10 @@ $ docker ps
 $ curl localhost:80
 ```
 
-❖	Stop and remove your dockercontainer usingdocker-compose.
+❖	Stop and remove your docker container using docker-compose.
 
+```
 $ docker-compose down
+```
 
-Stops and removes all containers
+

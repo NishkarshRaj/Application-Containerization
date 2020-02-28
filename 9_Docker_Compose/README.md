@@ -20,21 +20,19 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose --version
 ```
 
-●	Creating compose files
+**Creating compose files**
 
-❖	Create a directory named nginx in your root.
-
+❖ Create a directory named nginx in your root.
+```
 $ sudo mkdir nginx
-
-❖	Switch to that directory and create a file named docker-compose.yaml
-
+```
+❖ Switch to that directory and create a file named docker-compose.yml
+```
 $ cd nginx
 $ sudo vi docker-compose.yml
+```
 
-❖	Use docker-compose version 2 to create docker-compose.yaml file.
-Create a service named "databases". Use image named "mysql"
-Map container 3306 port to host machine 3306 port.
-Add environment variables named "MYSQL_ROOT_PASSWORD", "MYSQL_DATABASE", "MYSQL_USER" and "MYSQL_PASSWORD" along with corresponding values for all.
+❖ Create the environment file for passing as parameter to **docker-compose.yml** file
 
 		$ evs.env
 MYSQL_ROOT_PASSWORD=redhat08

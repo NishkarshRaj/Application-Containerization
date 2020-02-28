@@ -40,9 +40,11 @@ $ docker run –it wordpress bash
 	/var/lib/docker/volumes/[volumename]/_data/{}
 	Container with full permission -> sudo -s
 
-❖	Display all docker volumes.
+❖ Display all docker volumes.
 
-	$ docker volume ls
+```
+$ docker volume ls
+```
 
 ❖	Create another docker volume named "testvol"
 

@@ -2,7 +2,7 @@
 
 **1. Installation**
 
-❖ Install docker-compose on your machine, if not already installed.
+❖ **Install docker-compose on your machine, if not already installed.**
 
 ```
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
@@ -14,7 +14,7 @@ $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-❖ Check docker-compose version.
+❖ **Check docker-compose version.**
 
 ```
 $ docker-compose --version
@@ -22,11 +22,11 @@ $ docker-compose --version
 
 **2. Creating compose files**
 
-❖ Create a directory named nginx in your root.
+❖ **Create a directory named nginx in your root.**
 ```
 $ sudo mkdir nginx
 ```
-❖ Switch to that directory and create a file named docker-compose.yml
+❖ **Switch to that directory and create a file named docker-compose.yml**
 
 ```
 $ cd nginx
@@ -54,7 +54,7 @@ services:
 
 **82:80** -> Input to Output
 
-❖ Create the environment file for passing as parameter to **docker-compose.yml** file
+❖ **Create the environment file for passing as parameter to **docker-compose.yml** file**
 ```
 $ gedit evs.env
 ```
@@ -66,7 +66,7 @@ MYSQL_USER=root
 
 **3. Running images using docker-compose**
 
-❖	Save docker-compose.yaml file and do docker-compose up.
+❖	**Save docker-compose.yaml file and do docker-compose up.**
 ```
 $ docker-compose up –d
 ```
@@ -77,16 +77,14 @@ Launches all specified container in the .yml file
 $ docker ps
 ```
 
-❖	Verify nginx service is up and is accessible on machine.
+❖	**Verify nginx service is up and is accessible on machine.**
 
 ```
 $ curl localhost:80
 ```
 
-❖	Stop and remove your docker container using docker-compose.
+❖	**Stop and remove your docker container using docker-compose.**
 
 ```
 $ docker-compose down
 ```
-
-

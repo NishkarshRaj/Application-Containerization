@@ -48,3 +48,9 @@ $ docker run –it wordpress bash
 ❖	Remove docker volume "testvol"
 
 	$ docker volume rm testvol
+	
+❖ Delete all the Docker Volumes at once
+
+```
+$ docker volume prune
+```

@@ -4,14 +4,14 @@
 1. Permanent Storage
 2. Inter container communication by common storage
 
-❖ Create a volume that would be stored permanently on parent OS but controlled by Docker engine
+❖ **Create a volume that would be stored permanently on parent OS but controlled by Docker engine**
 
 ```
 $ docker volume create --name [volume name]
 $ docker volume ls
 ```
 
-❖ Run docker container and mount the volume by synchronizing it with a directory in the container.
+❖ **Run docker container and mount the volume by synchronizing it with a directory in the container.**
 
 ```
 $ docker run -it -v [volume name]:[Absolute path of sync folder] [image name] bash
@@ -19,7 +19,7 @@ $ docker run -it -v [volume name]:[Absolute path of sync folder] [image name] ba
 * If path of the sync folder specified does not exists, creates on container launch.
 * Docker Volumes are stored at **/var/lib/Docker/volumes**
 
-❖ Make changes in the synchronized folder of the container
+❖ **Make changes in the synchronized folder of the container**
 
 ```
 $ cd [sync folder]	
@@ -29,7 +29,7 @@ $ exit
 
 **Note: To give root permissions in Docker and Vagrant, use** `$ sudo -s`
 
-❖ Inspecting the default mounted volume:
+❖ **Inspecting the default mounted volume:**
 
 ```
 $ docker inspect [Container name or container ID]
@@ -39,19 +39,19 @@ $ docker inspect [Container name or container ID]
 
 **Note: Volume data is stored at** `/var/lib/docker/volumes/[volumename]/_data/{}`
 
-❖ Display all docker volumes.
+❖ **Display all docker volumes.**
 
 ```
 $ docker volume ls
 ```
 
-❖ Remove docker volume by name or ID
+❖ **Remove docker volume by name or ID**
 
 ```
 $ docker volume rm [volume name or volume ID]
 ```
 
-❖ Delete all the Docker Volumes at once
+❖ **Delete all the Docker volumes**
 
 ```
 $ docker volume prune

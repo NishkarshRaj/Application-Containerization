@@ -14,10 +14,11 @@ $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-❖	Check docker-compose version.
+❖ Check docker-compose version.
 
+```
 $ docker-compose --version
-
+```
 
 ●	Creating compose files
 

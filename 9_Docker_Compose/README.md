@@ -33,15 +33,14 @@ $ sudo vi docker-compose.yml
 ```
 
 ❖ Create the environment file for passing as parameter to **docker-compose.yml** file
-
-		$ evs.env
+```
+$ gedit evs.env
+```
+```
 MYSQL_ROOT_PASSWORD=redhat08
 MYSQL_DATABASE=nginxdb
 MYSQL_USER=root
-
-	Add another service named "web"
-Use image "nginx"
-
+```
 $ cat docker-compose.yml
 version: '3'
 services:

@@ -1,9 +1,11 @@
 ##  Docker volumes
 
-❖	Create docker volume named "dbvol" -> On the host parent machine -> folder but controlled by Docker -> “/var/lib/docker/volumes”
+❖ Create a volume that would be stored permanently on parent OS but controlled by Docker engine
 
-	$ docker volume create --name dbvol
-	$ docker volume ls
+```
+$ docker volume create --name dbvol
+$ docker volume ls
+```
 
 ❖	Run docker container from wordpress image and mount "dbvol" to /var/lib/mysql
 

@@ -1,5 +1,9 @@
 ##  Docker volumes
 
+**Need:**
+1. Permanent Storage
+2. Inter container communication by common storage
+
 ❖ Create a volume that would be stored permanently on parent OS but controlled by Docker engine
 
 ```

@@ -19,11 +19,17 @@ docker run -d -p 5000:5000 \
 * Mount **/var/lib/registry** - all the pushed containers would be stored here
 * Image used for private registry - **registry:2**
 
+![Generic failure text](img/R1.png)
+
+![Generic failure text](img/R2.png)
+
 2. Check for secure SSL connection to the registry (Security is implemented using **TLS + Nginx**)
 
 ```
 $ curl -i https://registry.test.training.katacoda.com:5000/v2/
 ```
+
+![Generic failure text](img/R3.png)
 
 3. Pull an image from DockerHub registry and tag it according to the domain of your registry.
 
@@ -35,11 +41,17 @@ $ docker pull redis:alpine
 $ docker tag redis:alpine registry.test.training.katacoda.com:5000/redis:alpine
 ```
 
+![Generic failure text](img/R4.png)
+
+![Generic failure text](img/R5.png)
+
 4. Push the images to registry
   
 ```
 $ docker push registry.test.training.katacoda.com:5000/redis:alpine
 ```
+
+![Generic failure text](img/R6.png)
 
 5. Delete the images from local machine
 
@@ -47,11 +59,16 @@ $ docker push registry.test.training.katacoda.com:5000/redis:alpine
 $ docker rmi redis:alpine && docker rmi registry.test.training.katacoda.com:5000/redis:alpine
 ```
 
+![Generic failure text](img/R7.png)
+
 6. Pull the image from private registry
 
 ```
 $ docker pull registry.test.training.katacoda.com:5000/redis:alpine
 ```
+
+![Generic failure text](img/R8.png)
+
 
 ## References
 

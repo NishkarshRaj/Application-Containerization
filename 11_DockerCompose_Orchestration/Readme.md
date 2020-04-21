@@ -42,8 +42,28 @@ EXPOSE 3000
 * **links** keyword is used to link one container in the yaml to another, it can be anything but it must be defined as a container name in the same file.
 
 * Second container is of key-value database called **Redis**
+
 * It is defined using Redis image from DockerHub
-* Volume is mapped from 
+
+* Volume is mapped from the linked Node.JS container to the current container.
 
 ## Docker-compose commands
+
+* Launch the cluster
+
+```
+$ docker-compose up -d # for detached mode
+```
+
+* Check the state of containers in the cluster
+
+```
+$ docker-compose ps
+```
+
+* Check logs of the cluster
+
+```
+$ docker-compose logs
+```
 

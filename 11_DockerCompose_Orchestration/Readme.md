@@ -23,7 +23,27 @@ redis:
     - /var/redis/data:/data
 ```
 
-**Explanation:**
+**Explanation:** Here we launch a NodeJS web application connected to Redis database.
+* Format is 
+```yaml
+container_name:
+  property:
+    - value
+```
+* First container called web is defined and uses a Dockerfile of NodeJS in the build path . (current folder)
+
+* Dockerfile for NodeJS application
+
+```Dockerfile
+FROM ocelotuproar/alpine-node:5.7.1-onbuild
+EXPOSE 3000
+```
+
+* **links** keyword is used to link one container in the yaml to another, it can be anything but it must be defined as a container name in the same file.
+
+* Second container is of key-value database called **Redis**
+* It is defined using Redis image from DockerHub
+* Volume is mapped from 
 
 ## Docker-compose commands
 

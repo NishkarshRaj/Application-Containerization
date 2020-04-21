@@ -1,4 +1,6 @@
 ## Creating Private Registry for Docker containers
+ 
+1. Create a private registry on your domain
 
 ```
 docker run -d -p 5000:5000 \
@@ -8,6 +10,14 @@ docker run -d -p 5000:5000 \
     -v /opt/registry/data:/var/lib/registry \
     --name registry registry:2
 ```
+
+* Daemon mode - always running in background
+* Port mapping
+* Certificates must be gathered for the domain. Link in description
+* Mount certificates to a certain folder in **registry** container, here **certs/**
+* Setup Environment variables in the registry container by using certs that were mounted in previous step.
+* Mount **/var/lib/registry** - all the pushed containers would be stored here
+* Image used for private registry - **registry:2**
 
 ```
 $ curl -i https://registry.test.training.katacoda.com:5000/v2/

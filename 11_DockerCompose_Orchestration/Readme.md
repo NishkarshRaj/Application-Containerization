@@ -67,3 +67,22 @@ $ docker-compose ps
 $ docker-compose logs
 ```
 
+* Scale up/down a specific cluster of the container
+
+```
+$ docker-compose scale [container-name]=replicals [container-name]=replicas ...
+```
+
+* Stop all the containers of the cluster
+
+```
+$ docker-compose stop
+```
+
+* Remove all containers of the cluster
+
+```
+$ docker-compose rm
+```
+
+

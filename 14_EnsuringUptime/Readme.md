@@ -16,6 +16,8 @@ $ docker ps -a
 $ docker logs [container name or ID]
 ```
 
+![Generic Image missing text](img/uptime1.png)
+
 **Note: Most crashes are generic and can be easily fixed by relaunching the container. Thus, it is a good practise to create a restart policy on failure of the container**
 
 **Restart Policy on Failure**
@@ -24,11 +26,15 @@ $ docker logs [container name or ID]
 $ docker run --restart=on-failure:[Number of times to restart] [docker image]
 ```
 
+![Generic Image missing text](img/uptime2.png)
+
 **Restart Policy - always restart on crash**
 
 ```
 $ docker run --restart=always [image name]
 ```
+
+![Generic Image missing text](img/uptime3.png)
 
 ## References
 

@@ -30,6 +30,12 @@ We can disable logging for some containers that are not very critical but very v
 $ docker run --log-driver=none [image name]
 ```
 
+### Modifying docker inspect command using Golang to check the Logging Method
+
+```
+docker inspect --format '{{ .HostConfig.LogConfig }}' [container name or container ID]
+```
+
 ## References
 
 [KataCoda Scenarios](https://katacoda.com/courses/docker/8)

@@ -8,6 +8,8 @@
 $ docker logs [container name or ID]
 ```
 
+![Hello](img/Log1.png)
+
 ### 2) SYSLog
  
 By default, the Docker logs are outputting using the json-file logger meaning the output stored in a JSON file on the host. 
@@ -22,6 +24,8 @@ docker run --log-driver=syslog [Image name]
 
 * Checking logs of Docker containers whose logs are synced with Syslog driver result in FATA[0000] error. System logs can only be accessed by using the Syslog stream.
 
+![Hello](img/Log2.png)
+
 ### 3) Disable Logging
 
 We can disable logging for some containers that are not very critical but very verbose.
@@ -30,11 +34,15 @@ We can disable logging for some containers that are not very critical but very v
 $ docker run --log-driver=none [image name]
 ```
 
+![Hello](img/Log3.png)
+
 ### Modifying docker inspect command using Golang to check the Logging Method
 
 ```
 docker inspect --format '{{ .HostConfig.LogConfig }}' [container name or container ID]
 ```
+
+![Hello](img/Log4.png)
 
 ## References
 

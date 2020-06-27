@@ -32,6 +32,16 @@ $ docker build -t secondimage .
 
 The result is that we can build this image but the application specific commands won't be executed until the built image is used as a base image. They'll then be executed as part of the base image's build.
 
+### Outputs
+
+![KataCoda Experiment](img/1.png)
+
+![KataCoda Experiment](img/2.png)
+
+![KataCoda Experiment](img/3.png)
+
+![KataCoda Experiment](img/4.png)
+
 ## References
 
 [KataCoda Scenario](https://www.katacoda.com/courses/docker/4)

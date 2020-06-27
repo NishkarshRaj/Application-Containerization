@@ -36,7 +36,15 @@ $ docker run nopass ls /app
 
 **Note:** If you need to use the passwords as part of a RUN command then you need to copy, execute and delete the files as part of a single RUN command. Only the final state of the Docker container is persisted inside the image.
 
-**2. Large files are not sent to Docker Image**
+**2. Improving Docker Build time by removing large files from Docker Build Context**
+
+**Breaking Concepts Deep:** Irrespective of the fact that Dockerfile uses any file or not, Docker engine sends all the files in the directory of Dockerfile to the remote Docker Server as Docker Build context. The speed of the build can be vastly improved by ignoring all the files that are of no use to the dockerfile.
+
+![img](img/3.png)
+
+**Ignoring large files from working directory**
+
+![img](img/4.png)
 
 ## References
 

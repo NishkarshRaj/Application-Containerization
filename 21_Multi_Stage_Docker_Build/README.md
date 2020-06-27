@@ -41,6 +41,8 @@ CMD ["/app"]
 COPY --from=0 /app/main /app
 ```
 
+![Image](img/1.png)
+
 Using the editor, create a Multi-Stage Dockerfile. The first stage using the Golang SDK to build a binary. The second stage copies the resulting binary into a optimised Docker Image.
 
 ### Building Docker Images
@@ -51,13 +53,17 @@ Create the desired Docker Image using the build command below.
 $ docker build -f Dockerfile.multi -t golang-app .
 ```
 
+![Image](img/2.png)
+
+![Image](img/3.png)
+
 The result will be two images. One untagged that was used for the first stage and the second, smaller image, our target image.
 
 `docker images`
 
 If you receive the error, COPY --from=0 /build/out /app/ Unknown flag: from, it means you're running an older version of Docker without the multi-stage support. Step 1 of this scenario upgrades the current Docker version.
 
-![Image](img/.png)
+![Image](img/4.png)
 
 **Note: You can see that Development image containing binary of Docker had 293 MB space but target image is just 12 MB in size**
 
@@ -69,6 +75,8 @@ The image can be launched and deployed without any changes required.
 $ docker run -d -p 80:80 golang-app
 $ curl localhost
 ```
+
+![Image](img/5.png)
 
 ## References
 

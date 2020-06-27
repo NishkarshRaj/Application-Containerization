@@ -59,6 +59,31 @@ $ docker run --net=backend-network alpine ping -c1 redis
 
 ### Step 3) Connect Containers in network
 
+Docker supports multiple networks and containers being attached to more than one network at a time.
+
+For example, let's create a separate network with a Node.js application that communicates with our existing Redis instance.
+
+```
+$ docker network create frontend-network
+```
+
+When using the **connect** command it is possible to attach existing containers to the network.
+
+```
+# docker network connect [network name] [container name]
+$ docker network connect frontend-network redis
+```
+
+When we launch the web server, given it's attached to the same network it will be able to communicate with our Redis instance.
+
+```
+$ docker run -d -p 3000:3000 --net=frontend-network katacoda/redis-node-docker-example
+```
+
+You can test it using `curl docker:3000`
+
+![Image](img/3.png)
+
 ### Step 4) Create Aliases
 
 ### Step 5) Disconnect Networks

@@ -22,13 +22,19 @@ $ docker swarm init --advertise-addr $(hostname -i)
 $ docker swarm join --token [token] [host IP]
 ```
 
+![Image](img/2.png)
+
 ### Show member nodes from master
 
 ```
 $ docker node ls
 ```
 
+![Image](img/3.png)
+
 ### Docker Swarm Architecture
+
+![Image](img/5.png)
 
 ### Clone the Voting Application on Master Node
 
@@ -36,6 +42,8 @@ $ docker node ls
 $ git clone https://github.com/docker/example-voting-app
 $ cd example-voting-app
 ```
+
+![Image](img/4.png)
 
 ### Create Docker Compose file
 
@@ -142,13 +150,21 @@ $ docker stack ls
 $ docker stack services voting_stack
 ```
 
+![Image](img/6.png)
+
+![Image](img/7.png)
+
 ### Stack vs Service vs Tasks in Docker Swarms
+
+![Image](img/8.png)
 
 ### Scaling Swarm Application
 
 ```
 $ docker service scale voting_stack_vote=5
 ```
+
+![Image](img/9.png)
 
 ## References
 

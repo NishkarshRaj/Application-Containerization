@@ -20,6 +20,10 @@ sudo chown $(id -u):$(id -g) $HOME/admin.conf
 export KUBECONFIG=$HOME/admin.conf
 ```
 
+![Image](img/1.png)
+
+![Image](img/2.png)
+
 ### 2) Deploy Container Networking Interface (CNI)
 
 The Container Network Interface (CNI) defines how the different nodes and their workloads should communicate. There are multiple network providers available, some are listed on https://kubernetes.io/docs/concepts/cluster-administration/addons/
@@ -247,6 +251,10 @@ Weave will now deploy as a series of Pods on the cluster. The status of this can
 
 When installing Weave on your cluster, visit https://www.weave.works/docs/net/latest/kube-addon/ for details.
 
+![Image](img/3.png)
+
+![Image](img/4.png)
+
 ### 3) Join Cluster
 
 Once the Master and CNI has initialised, additional nodes can join the cluster as long as they have the correct token. The tokens can be managed via kubeadm token:
@@ -261,6 +269,8 @@ $ kubeadm token list
 
 The --discovery-token-unsafe-skip-ca-verification tag is used to bypass the Discovery Token verification. As this token is generated dynamically, we couldn't include it within the steps. When in production, use the token provided by kubeadm init.
 
+![Image](img/5.png)
+
 ### 4) View Nodes
 
 The cluster has now been initialised. The Master node will manage the cluster, while our one worker node will run our container workloads.
@@ -270,6 +280,8 @@ The Kubernetes CLI, known as kubectl, can now use the configuration to access th
 ```
 $ kubectl get nodes
 ```
+
+![Image](img/6.png)
 
 ### 5) Deploy Pods
 
@@ -288,6 +300,8 @@ The status of the Pod creation can be viewed using `$ kubectl get pods`
 Once running, you can see the Docker Container running on the node.
 
 ```$ docker ps | grep docker-http-server```
+
+![Image](img/7.png)
 
 ## References
 

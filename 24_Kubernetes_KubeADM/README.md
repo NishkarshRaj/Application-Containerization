@@ -249,11 +249,45 @@ When installing Weave on your cluster, visit https://www.weave.works/docs/net/la
 
 ### 3) Join Cluster
 
+Once the Master and CNI has initialised, additional nodes can join the cluster as long as they have the correct token. The tokens can be managed via kubeadm token:
+
+```
+$ kubeadm token list
+```
+
+* On the Client Node:
+
+```$ kubeadm join --discovery-token-unsafe-skip-ca-verification --token=102952.1a7dd4cc8d1f4cc5 172.17.0.8:6443```
+
+The --discovery-token-unsafe-skip-ca-verification tag is used to bypass the Discovery Token verification. As this token is generated dynamically, we couldn't include it within the steps. When in production, use the token provided by kubeadm init.
+
 ### 4) View Nodes
+
+The cluster has now been initialised. The Master node will manage the cluster, while our one worker node will run our container workloads.
+
+The Kubernetes CLI, known as kubectl, can now use the configuration to access the cluster. For example, the command below will return the two nodes in our cluster.
+
+```
+$ kubectl get nodes
+```
 
 ### 5) Deploy Pods
 
-### 6) Deploy Dashboard
+The state of the two nodes in the cluster should now be Ready. This means that our deployments can be scheduled and launched.
+
+Using Kubectl, it's possible to deploy pods. **Commands are always issued for the Master with each node only responsible for executing the workloads.**
+
+The command below create a Pod based on the Docker Image katacoda/docker-http-server.
+
+```
+$ kubectl create deployment http --image=katacoda/docker-http-server:latest
+```
+
+The status of the Pod creation can be viewed using `$ kubectl get pods`
+
+Once running, you can see the Docker Container running on the node.
+
+```$ docker ps | grep docker-http-server```
 
 ## References
 

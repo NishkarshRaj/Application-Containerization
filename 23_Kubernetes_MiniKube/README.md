@@ -18,6 +18,8 @@ $ minikube version
 $ minikube start --wait=false
 ```
 
+![Image](img/1.png)
+
 ### Gather Kubernetes Cluster Information
 
 The cluster can be interacted with using the kubectl CLI. This is the main approach used for managing Kubernetes and the applications running on top of the cluster.
@@ -29,6 +31,9 @@ To view the nodes in the cluster using `kubectl get nodes`
 If the node is marked as NotReady then it is still starting the components.
 
 This command shows all nodes that can be used to host our applications. Now we have only one node, and we can see that it’s status is ready (it is ready to accept applications for deployment).
+
+
+![Image](img/2.png)
 
 ### Deploy Containers
 
@@ -53,9 +58,18 @@ curl host01:$PORT
 ```
 The result is the container that processed the request.
 
+
+![Image](img/3.png)
+
 ### MiniKube Dashboard
 
 Enable the dashboard using Minikube with the command ```$ minikube addons enable dashboard```
+
+
+![Image](img/4.png)
+
+
+![Image](img/5.png)
 
 ## References
 

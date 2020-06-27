@@ -86,7 +86,28 @@ You can test it using `curl docker:3000`
 
 ### Step 4) Create Aliases
 
+Links are still supported when using docker network and provide a way to define an Alias to the container name. This will give the container an extra DNS entry name and way to be discovered. When using --link the embedded DNS will guarantee that localised lookup result only on that container where the --link is used.
+
+The other approach is to provide an alias when connecting a container to a network.
+
+The following command will connect our Redis instance to the frontend-network with the alias of db.
+
+```
+$ docker network create frontend-network2
+$ docker network connect --alias db frontend-network2 redis
+```
+
+When containers attempt to access a service via the name db, they will be given the IP address of our Redis container.
+
+```
+$ docker run --net=frontend-network2 alpine ping -c1 db
+```
+
+![Image](img/4.png)
+
 ### Step 5) Disconnect Networks
+
+![Image](img/5.png)
 
 ## References
 

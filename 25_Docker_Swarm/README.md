@@ -134,6 +134,22 @@ volumes:
   db-data:
 ```
 
+### Deploy Application Stack
+
+```
+$ docker stack deploy --compose-file=docker-stack.yml voting_stack
+$ docker stack ls
+$ docker stack services voting_stack
+```
+
+### Stack vs Service vs Tasks in Docker Swarms
+
+### Scaling Swarm Application
+
+```
+$ docker service scale voting_stack_vote=5
+```
+
 ## References
 
 [Play With Docker ClassRoom](https://training.play-with-docker.com/ops-s1-swarm-intro/)

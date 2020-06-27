@@ -15,6 +15,8 @@ When creating the container, we also provide a -v option to define where other c
 $ docker create -v /config --name dataContainer busybox
 ```
 
+![Image](img/1.png)
+
 * Copy files form local workspace to Data Container
 
 ```
@@ -46,6 +48,7 @@ $ docker export dataContainer > dataContainer.tar
 
 The command `docker import dataContainer.tar` will import the Data Container back into Docker.
 
+![Image](img/2.png)
 
 ## References
 

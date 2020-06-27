@@ -107,7 +107,24 @@ $ docker run --net=frontend-network2 alpine ping -c1 db
 
 ### Step 5) Disconnect Networks
 
+Explore the network to see which containers are attached and their IP addresses.
+
+```
+# docker network inspect [network name]
+$ docker network inspect frontend-network
+```
+
 ![Image](img/5.png)
+
+![Image](img/6.png)
+
+The following command disconnects the redis container from the frontend-network.
+
+```
+# docker network disconnect [network name] [container name]
+$ docker network disconnect frontend-network redis
+```
+
 
 ## References
 
